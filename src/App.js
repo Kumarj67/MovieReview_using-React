@@ -1,13 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import {Header,Footer,Middle} from "./components/Header";
+
+const name="Jeetesh"
 function App() {
+  
   return (
     <div className="App">
+    <Header />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Learn React
+          {name}
+          <Header />
+          <Middle />
+          <Footer /> 
+
         </p>
         <a
           className="App-link"
