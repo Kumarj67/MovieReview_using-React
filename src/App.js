@@ -1,33 +1,35 @@
-
+import Header from './components/Header';
 import './App.css';
-import {Header,Footer,Middle} from "./components/Header";
+// import './components/Header.css';
+import Movie from './components/Movie';
+import movies from "./movies";
 
-const name="Jeetesh"
 function App() {
   
   return (
+<>
     <div className="App">
-    <Header />
-      <header className="App-header">
-        
-        <p>
-          Learn React
-          {name}
-          <Header />
-          <Middle />
-          <Footer /> 
+    <Header/>
+     </div>
+     <div className="main">
+     {
+      movies.map((element)=>{
+        return(
+        <Movie
+          title={element.Title}
+          year={element.Year}
+          img={element.Poster}
 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        />
+        )
+
+      })
+     }
+      
+      
+     </div>
+     </>
+    
   );
 }
 
